@@ -1,0 +1,50 @@
+[
+  {
+    "totalLights": 4,
+    "lights": [
+      {
+        "lightColor": "red",
+        "timer": 3,
+        "order": 4
+      },
+      {
+        "lightColor": "yellow",
+        "blink": true,
+        "timer": 2,
+        "order": 3
+      },
+      {
+        "lightColor": "green",
+        "timer": 3,
+        "order": 2
+      },
+      {
+        "displayText": "walk",
+        "displayTextColor": "green",
+        "timer": 2,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "totalLights": 3,
+    "lights": [
+      {
+        "lightColor": "red",
+        "timer": 3,
+        "order": 1
+      },
+      {
+        "lightColor": "yellow",
+        "blink": true,
+        "timer": 2,
+        "order": 2
+      },
+      {
+        "lightColor": "green",
+        "timer": 3,
+        "order": 3
+      }
+    ]
+  }
+]

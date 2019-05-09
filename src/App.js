@@ -1,16 +1,25 @@
 import React, { Component } from "react";
-import Light from "./Light";
+
+import datas from "./data.json";
+import TrafficSignal from "./TrafficSignal";
 
 class App extends Component {
   render() {
-    return (
-      <div className="app">
-        <Light lightColor="red" timer={3} />
-        <Light lightColor="yellow" blink={true} timer={3} />
-        <Light lightColor="green" timer={3} />
-        <Light displayText="walk" displayTextColor="green" timer={5} />
-      </div>
-    );
+    const addTrafficSignals = () => {
+      let signals = [];
+      for (let i = 0; i < datas.length - 1; i++) {
+        signals.push(
+          <TrafficSignal
+            key={i}
+            trafficSignalId={i + 1}
+            totalLights={datas[i].totalLights}
+            lights={datas[i].lights}
+          />
+        );
+      }
+      return signals;
+    };
+    return <div className="app">{addTrafficSignals()}</div>;
   }
 }
 
