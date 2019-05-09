@@ -33,7 +33,7 @@ class Lamp extends Component {
           backgroundColor: `${this.state.bgColor}`
         }}
       >
-        {this.props.displayText.substring(0, 1)}
+        {this.props.displayText.substring(0, 1).toUpperCase()}
       </div>
     );
   }

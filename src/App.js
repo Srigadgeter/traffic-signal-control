@@ -8,7 +8,7 @@ class App extends Component {
         <Light lightColor="red" timer={3} />
         <Light lightColor="yellow" blink={true} timer={3} />
         <Light lightColor="green" timer={3} />
-        <Light displayText="Walk" displayTextColor="green" timer={5} />
+        <Light displayText="walk" displayTextColor="green" timer={5} />
       </div>
     );
   }
