@@ -4,24 +4,23 @@
     "lights": [
       {
         "lightColor": "red",
-        "timer": 3,
+        "timer": 4,
         "order": 4
       },
       {
         "lightColor": "yellow",
         "blink": true,
-        "timer": 2,
+        "timer": 3,
         "order": 3
       },
       {
         "lightColor": "green",
-        "timer": 3,
+        "timer": 5,
         "order": 2
       },
       {
         "displayTextColor": "green",
         "displayText": "walk",
-        "blink": true,
         "timer": 3,
         "order": 1
       }
@@ -32,18 +31,18 @@
     "lights": [
       {
         "lightColor": "red",
-        "timer": 2,
+        "timer": 4,
         "order": 1
       },
       {
         "lightColor": "yellow",
         "blink": true,
-        "timer": 1,
+        "timer": 3,
         "order": 2
       },
       {
         "lightColor": "green",
-        "timer": 2,
+        "timer": 4,
         "order": 3
       }
     ]
@@ -53,25 +52,25 @@
     "lights": [
       {
         "lightColor": "red",
-        "timer": 3,
+        "timer": 5,
         "order": 2
       },
       {
         "lightColor": "yellow",
         "blink": true,
-        "timer": 2,
+        "timer": 3,
         "order": 1
       },
       {
         "lightColor": "green",
-        "timer": 3,
+        "timer": 5,
         "order": 4
       },
       {
         "displayTextColor": "green",
         "displayText": "walk",
         "blink": true,
-        "timer": 2,
+        "timer": 3,
         "order": 3
       }
     ]

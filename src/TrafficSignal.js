@@ -2,9 +2,11 @@ import React, { Component } from "react";
 
 import "./TrafficSignal.css";
 import Light from "./Light";
+import CountDown from "./CountDown";
 
 class TrafficSignal extends Component {
   lampChange = 0;
+  TIMERS_ARRAY = [];
   TRIGGERS_ARRAY = [];
 
   state = {
@@ -20,20 +22,18 @@ class TrafficSignal extends Component {
       if (this.props.lights[i].order !== undefined) {
         orders.push(this.props.lights[i].order);
       }
-      // console.log("orders", orders);
     }
 
     orders.forEach((element, index) => {
       indexes.push(orders.indexOf(index + 1));
     });
-    // console.log("indexes", indexes);
 
     indexes.forEach(element => {
       let arr = Array(this.props.totalLights).fill(false);
       arr.fill(true, element, element + 1);
       this.TRIGGERS_ARRAY.push(arr);
+      this.TIMERS_ARRAY.push(this.props.lights[element].timer);
     });
-    // console.log(this.TRIGGERS_ARRAY);
 
     if (this.lampChange < this.props.totalLights) {
       this.setState({
@@ -43,9 +43,7 @@ class TrafficSignal extends Component {
   }
 
   handleLampChange = () => {
-    console.log(
-      ">>>>>>>>>> i came to trafficSignal.js this.handleLampChange function"
-    );
+    // console.log(">>> I came to trafficSignal.js handleLampChange function");
     this.lampChange =
       this.lampChange < this.props.totalLights - 1 ? this.lampChange + 1 : 0;
     this.setState({
@@ -103,7 +101,7 @@ class TrafficSignal extends Component {
       <div className="trafficSignal">
         <span className="title">TS {this.props.trafficSignalId}</span>
         <div className="lightContainer">{drawLights()}</div>
-        <div className="countdownPanel">{0}</div>
+        <CountDown startCount={this.TIMERS_ARRAY[this.lampChange]} />
       </div>
     );
   }

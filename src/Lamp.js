@@ -45,7 +45,7 @@ class Lamp extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.reference !== prevState.reference) {
-      this.timerId = setTimeout(this.coloring, 500);
+      this.timerId = setTimeout(this.coloring, 1000);
     }
   }
 
@@ -67,7 +67,7 @@ class Lamp extends Component {
             reference: this.state.reference === "" ? this.props.displayText : ""
           });
         }
-        this.timerId = setTimeout(this.coloring, this.props.timer * 1000);
+        this.timerId = setTimeout(this.coloring, this.props.timer * 500);
       } else this.timerId = setTimeout(this.coloring, 500);
     } else if ((this.clearToken < 1) & (this.glowTime === 0)) {
       clearTimeout(this.timerId);
