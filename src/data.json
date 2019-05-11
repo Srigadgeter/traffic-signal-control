@@ -19,9 +19,10 @@
         "order": 2
       },
       {
-        "displayText": "walk",
         "displayTextColor": "green",
-        "timer": 2,
+        "displayText": "walk",
+        "blink": true,
+        "timer": 3,
         "order": 1
       }
     ]
@@ -31,18 +32,46 @@
     "lights": [
       {
         "lightColor": "red",
-        "timer": 3,
+        "timer": 2,
         "order": 1
       },
       {
         "lightColor": "yellow",
         "blink": true,
-        "timer": 2,
+        "timer": 1,
         "order": 2
       },
       {
         "lightColor": "green",
+        "timer": 2,
+        "order": 3
+      }
+    ]
+  },
+  {
+    "totalLights": 4,
+    "lights": [
+      {
+        "lightColor": "red",
         "timer": 3,
+        "order": 2
+      },
+      {
+        "lightColor": "yellow",
+        "blink": true,
+        "timer": 2,
+        "order": 1
+      },
+      {
+        "lightColor": "green",
+        "timer": 3,
+        "order": 4
+      },
+      {
+        "displayTextColor": "green",
+        "displayText": "walk",
+        "blink": true,
+        "timer": 2,
         "order": 3
       }
     ]

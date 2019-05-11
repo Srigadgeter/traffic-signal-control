@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     const addTrafficSignals = () => {
       let signals = [];
-      for (let i = 0; i < datas.length - 1; i++) {
+      for (let i = 0; i < datas.length; i++) {
         signals.push(
           <TrafficSignal
             key={i}
